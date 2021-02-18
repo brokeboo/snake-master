@@ -10,15 +10,22 @@ namespace snak
     {
         static void Main(string[] args)
         {
-            point p1 = new point(1, 3, '*');
-            p1.Draw();
+            Console.SetBufferSize(80, 25);
 
-            point p2 = new point(4, 5, '#');
-            p2.Drow();
+            //отрисовка рамки
+            horizontallLine upLine = new horizontallLine(0, 78, 0, '+');
+            horizontallLine downLine = new horizontallLine(0, 78, 24, '+');
+            verticalLine leftLine = new verticalLine(0, 24, 0, '+');
+            verticalLine rightLine = new verticalLine(0, 24, 78, '+');
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
 
-            horizontallLine line = new horizontallLine(5, 10, 8, '+');
-            line.Drow();
-            Console.ReadLine();
+            //отрисовка точек
+            point p = new point(4, 5, '*');
+            snake snake = new snake(p, 4, direction.RIGHT)
+            
         }
     }
 } 

@@ -22,6 +22,15 @@ namespace snak
             sym = _sym;
         }
 
+        public point(point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset)
+
         internal void Drow()
         {
             throw new NotImplementedException();
